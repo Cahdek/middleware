@@ -3,6 +3,12 @@
     "description": "Middleware framework using Mezzio and Doctrine",
     "type": "project",
     "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Doug Hunting",
+            "email": "doug@huntingperformance.com"
+        }
+    ],
     "keywords": [
         "laminas",
         "mezzio",
