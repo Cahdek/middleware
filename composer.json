@@ -1,6 +1,6 @@
 {
-    "name": "mezzio/mezzio-skeleton",
-    "description": "Laminas mezzio skeleton. Begin developing PSR-15 middleware applications in seconds!",
+    "name": "cahdek/middleware",
+    "description": "Middleware framework using Mezzio and Doctrine",
     "type": "project",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -13,14 +13,11 @@
         "psr-11",
         "psr-15"
     ],
-    "homepage": "https://mezzio.dev",
+    "homepage": "https://github.com/Cahdek/middleware",
     "support": {
         "docs": "https://docs.mezzio.dev/mezzio/",
-        "issues": "https://github.com/mezzio/mezzio-skeleton/issues",
-        "source": "https://github.com/mezzio/mezzio-skeleton",
-        "rss": "https://github.com/mezzio/mezzio-skeleton/releases.atom",
-        "chat": "https://laminas.dev/chat",
-        "forum": "https://discourse.laminas.dev"
+        "issues": "https://github.com/Cahdek/middleware/issues",
+        "source": "https://github.com/Cahdek/middleware"
     },
     "config": {
         "sort-packages": true
@@ -70,9 +67,7 @@
         }
     },
     "scripts": {
-        "post-create-project-cmd": [
-            "@development-enable"
-        ],
+        "post-create-project-cmd": "@development-enable",
         "development-disable": "laminas-development-mode disable",
         "development-enable": "laminas-development-mode enable",
         "development-status": "laminas-development-mode status",
