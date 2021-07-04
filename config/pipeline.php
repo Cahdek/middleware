@@ -1,6 +1,5 @@
 <?php
-
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use Laminas\Stratigility\Middleware\ErrorHandler;
 use Mezzio\Application;
@@ -14,6 +13,7 @@ use Mezzio\Router\Middleware\ImplicitOptionsMiddleware;
 use Mezzio\Router\Middleware\MethodNotAllowedMiddleware;
 use Mezzio\Router\Middleware\RouteMiddleware;
 use Psr\Container\ContainerInterface;
+use Mezzio\Cors\Middleware\CorsMiddleware;
 
 /**
  * Setup middleware pipeline:
@@ -35,14 +35,14 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     // middleware eventually (i.e., callable or service name).
     //
     // Middleware can be attached to specific paths, allowing you to mix and match
-    // applications under a common domain.  The handlers in each middleware
+    // applications under a common domain. The handlers in each middleware
     // attached this way will see a URI with the matched path segment removed.
     //
     // i.e., path of "/api/member/profile" only passes "/member/profile" to $apiMiddleware
     // - $app->pipe('/api', $apiMiddleware);
     // - $app->pipe('/docs', $apiDocMiddleware);
     // - $app->pipe('/files', $filesMiddleware);
-
+    $app->pipe(CorsMiddleware::class);
     // Register the routing middleware in the middleware pipeline.
     // This middleware registers the Mezzio\Router\RouteResult request attribute.
     $app->pipe(RouteMiddleware::class);
