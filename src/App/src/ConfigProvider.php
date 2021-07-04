@@ -1,5 +1,7 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
+
 namespace App;
 
 /**
@@ -9,7 +11,6 @@ namespace App;
  */
 class ConfigProvider
 {
-
     /**
      * Returns the configuration array
      *
@@ -20,7 +21,7 @@ class ConfigProvider
     {
         return [
             'dependencies' => $this->getDependencies(),
-            'templates' => $this->getTemplates()
+            'templates'    => $this->getTemplates(),
         ];
     }
 
@@ -31,11 +32,11 @@ class ConfigProvider
     {
         return [
             'invokables' => [
-                Handler\PingHandler::class => Handler\PingHandler::class
+                Handler\PingHandler::class => Handler\PingHandler::class,
             ],
-            'factories' => [
-                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class
-            ]
+            'factories'  => [
+                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+            ],
         ];
     }
 

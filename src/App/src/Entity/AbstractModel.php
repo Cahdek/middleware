@@ -1,19 +1,19 @@
 <?php
+
+declare(strict_types=1);
+
 namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- *
  * @ORM\MappedSuperclass
  * @ORM\HasLifecycleCallbacks
  */
 abstract class AbstractModel
 {
-
     /**
-     *
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
@@ -23,7 +23,6 @@ abstract class AbstractModel
     protected $id;
 
     /**
-     *
      * @ORM\Column(type="datetime",columnDefinition="DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP")
      *
      * @var DateTime
@@ -31,7 +30,6 @@ abstract class AbstractModel
     protected $created;
 
     /**
-     *
      * @ORM\Column(type="datetime",columnDefinition="DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
      *
      * @var DateTime
@@ -39,7 +37,6 @@ abstract class AbstractModel
     protected $modified;
 
     /**
-     *
      * @return number
      */
     public function getId(): int
@@ -58,7 +55,6 @@ abstract class AbstractModel
     }
 
     /**
-     *
      * @param number $id
      */
     public function setId($id): AbstractModel
@@ -68,7 +64,6 @@ abstract class AbstractModel
     }
 
     /**
-     *
      * @param DateTime $created
      */
     public function setCreated($created): AbstractModel
@@ -78,7 +73,6 @@ abstract class AbstractModel
     }
 
     /**
-     *
      * @param DateTime $modified
      */
     public function setModified($modified): AbstractModel
@@ -88,7 +82,6 @@ abstract class AbstractModel
     }
 
     /**
-     *
      * @ORM\PrePersist
      */
     public function setDateCreated(): AbstractModel
@@ -98,10 +91,8 @@ abstract class AbstractModel
     }
 
     /**
-     *
      * @ORM\PrePersist
      * @ORM\PreUpdate
-     * @return AbstractModel
      */
     public function updateDateModified(): AbstractModel
     {
