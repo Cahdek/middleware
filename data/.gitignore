@@ -2,3 +2,6 @@
 !cache
 !cache/.gitkeep
 !.gitignore
+!doctrine
+!doctrine/migrations
+!doctrine/migrations/.gitkeep
