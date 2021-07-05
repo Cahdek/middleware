@@ -1,6 +1,5 @@
 <?php
-
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use Doctrine\DBAL\Driver\PDO\MySQL\Driver as PDOMySQLDriver;
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
@@ -11,31 +10,31 @@ return [
         'connection' => [
             'orm_default' => [
                 'driver_class' => PDOMySQLDriver::class,
-                'params'       => [
-                    'host'     => 'hp-db',
-                    'dbname'   => 'hp',
-                    'user'     => 'hp',
-                    'password' => 'H0vhcmwr!',
-                    'port'     => '3306',
-                ],
-            ],
+                'params' => [
+                    'host' => '<database server>',
+                    'dbname' => '<db name>',
+                    'user' => '<user>',
+                    'password' => '<password>',
+                    'port' => '3306'
+                ]
+            ]
         ],
-        'driver'     => [
-            'orm_default'          => [
-                'class'   => MappingDriverChain::class,
+        'driver' => [
+            'orm_default' => [
+                'class' => MappingDriverChain::class,
                 'drivers' => [
-                    'App\Entity' => 'application_entities',
-                ],
+                    'App\Entity' => 'application_entities'
+                ]
             ],
             'application_entities' => [
                 'class' => AnnotationDriver::class,
                 'cache' => 'array',
                 'paths' => [
-                    __DIR__ . '/../../src/',
-                ],
-            ],
-        ],
-    ],
+                    __DIR__ . '/../../src/'
+                ]
+            ]
+        ]
+    ]
 ];
 
 /**
