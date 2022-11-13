@@ -26,7 +26,7 @@ removed.
 Start your new Mezzio project with composer:
 
 ```bash
-$ composer create-project mezzio/mezzio-skeleton <project-path>
+$ composer create-project Cahdek/middleware <project-path>
 ```
 
 After choosing and installing the packages you want, go to the
