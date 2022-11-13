@@ -59,9 +59,14 @@ return [
         'connection'    => [
             'orm_default' => [
                 'driver_class' => Driver::class,
+                'params'       => [
+                    'host'     => '<host>',
+                    'port'     => '<port>',
+                    'user'     => '<user>',
+                    'password' => '<pass>',
+                ],
                 // 'wrapper_class'            => null,
                 // 'pdo'                      => null,
-                // 'params'                   => [],
                 // 'doctrine_mapping_types'   => [],
                 // 'doctrine_commented_types' => [],
             ],
