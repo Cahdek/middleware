@@ -23,14 +23,16 @@ abstract class AbstractModel
     protected $id;
 
     /**
-     * @ORM\Column(type="datetime",columnDefinition="DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP")
+     * @ORM\Column(type="datetime",
+     * columnDefinition="DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP")
      *
      * @var DateTime
      */
     protected $created;
 
     /**
-     * @ORM\Column(type="datetime",columnDefinition="DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+     * @ORM\Column(type="datetime",
+     * columnDefinition="DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
      *
      * @var DateTime
      */
