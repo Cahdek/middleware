@@ -50,11 +50,12 @@
         "laminas/laminas-component-installer": "^2.6 || ^3.0",
         "laminas/laminas-config-aggregator": "^1.6",
         "laminas/laminas-diactoros": "^2.7",
+        "laminas/laminas-servicemanager": "^3.4",
         "laminas/laminas-stdlib": "^3.6",
         "mezzio/mezzio": "^3.7",
         "mezzio/mezzio-helpers": "^5.7",
-        "laminas/laminas-servicemanager": "^3.4",
-        "mezzio/mezzio-laminasrouter": "^3.0.1"
+        "mezzio/mezzio-laminasrouter": "^3.0.1",
+        "roave/psr-container-doctrine": "^3.6"
     },
     "require-dev": {
         "filp/whoops": "^2.7.1",
