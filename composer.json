@@ -55,7 +55,8 @@
         "mezzio/mezzio": "^3.7",
         "mezzio/mezzio-helpers": "^5.7",
         "mezzio/mezzio-laminasrouter": "^3.0.1",
-        "roave/psr-container-doctrine": "^3.6"
+        "roave/psr-container-doctrine": "^3.6",
+        "symfony/serializer": "^6.0"
     },
     "require-dev": {
         "filp/whoops": "^2.7.1",
