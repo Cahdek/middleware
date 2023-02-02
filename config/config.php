@@ -13,7 +13,9 @@ $cacheConfig = [
     'config_cache_path' => 'data/cache/config-cache.php',
 ];
 
-$aggregator = new ConfigAggregator([
+$aggregator = new ConfigAggregator(
+    [
+    \App\ConfigProvider::class,
     \Mezzio\Tooling\ConfigProvider::class,
     \Mezzio\Router\LaminasRouter\ConfigProvider::class,
     \Laminas\Router\ConfigProvider::class,
@@ -43,6 +45,7 @@ $aggregator = new ConfigAggregator([
 
     // Load development config if it exists
     new PhpFileProvider(realpath(__DIR__) . '/development.config.php'),
-], $cacheConfig['config_cache_path']);
+    ], $cacheConfig['config_cache_path']
+);
 
 return $aggregator->getMergedConfig();
